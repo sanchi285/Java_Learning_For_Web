@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"AbstructClass"},{"l":"All Packages","u":"allpackages-index.html"},{"l":"exceptiondemo"},{"l":"Inheritance"},{"l":"Interfaces"},{"l":"javadocpkg"},{"l":"multithread"},{"l":"Static_Paractice"}];updateSearchResults();
