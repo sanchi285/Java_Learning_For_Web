@@ -5,16 +5,12 @@ import java.io.Writer;
 
 public class FileExample {
 
-    public static void main(String[] args){
+    public static void main(String[] args) throws Exception{
         String path = "/home/sanchi/learning/Java_Learning_web/Java_Learning_For_Web/Test.txt";
-        try {
-            FileOutputStream fos = new FileOutputStream(path);
+        try (FileOutputStream fos = new FileOutputStream(path)){
             String str  = "Learn Java Programming";
             fos.write(str.getBytes());
-            fos.close();
         }
-        catch (Exception e){
-            System.out.println(e);
-        }
+
     }
 }
