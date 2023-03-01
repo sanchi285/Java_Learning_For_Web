@@ -11,6 +11,9 @@ public class RandomAccessFileDemo {
         System.out.println((char)rf.read());
         rf.skipBytes(3);
         System.out.println((char)rf.read());
+        System.out.println(rf.getFilePointer());
+        rf.seek(rf.getFilePointer()+20);
+        rf.write('*');
 
     }
 }
