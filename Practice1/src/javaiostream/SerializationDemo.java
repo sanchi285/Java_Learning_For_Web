@@ -8,7 +8,13 @@ class Student implements Serializable {
     double cgpa;
 }
 
+
+
 public class SerializationDemo {
+
+    static void showVal(Student st){
+        System.out.println(st.str+" "+st.rool+" "+st.cgpa);
+    }
 
     public static void main(String [] args) throws Exception{
         String path1 = "/home/sanchi/learning/Java_Learning_web/Java_Learning_For_Web/Student1.txt";
@@ -22,5 +28,14 @@ public class SerializationDemo {
         oos.close();
         fos.close();
         System.out.println("Done Serialization");
+
+        FileInputStream fis = new FileInputStream(path1);
+        ObjectInputStream ois = new ObjectInputStream(fis);
+        Student st_read  = (Student) ois.readObject();
+        showVal(st_read);
+        ois.close();
+        fis.close();
+
+
     }
 }
