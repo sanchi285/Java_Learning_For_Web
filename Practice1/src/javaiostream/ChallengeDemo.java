@@ -1,12 +1,9 @@
 package javaiostream;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
+import java.io.*;
 
 
-class Customers{
+class Customers implements Serializable {
 
     private static int id;
     private String cusId;
@@ -24,8 +21,8 @@ class Customers{
         this.cusId=Integer.toString(id);
     }
 
-    @Override
-    public String toString() {
+
+    public String ToString() {
         return name+" "+id+" "+phone+" \n";
     }
 }
@@ -86,7 +83,7 @@ public class ChallengeDemo {
 
             for (int i=0;i<arr.length;i++){
                 Customers cs = (Customers)ois.readObject();
-                System.out.println(cs.toString());
+                System.out.println(cs.ToString());
             }
 
             ois.close();
