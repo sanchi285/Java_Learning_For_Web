@@ -18,12 +18,12 @@ class Customers implements Serializable {
         this.name = name;
         this.phone =phone;
         id++;
-        this.cusId=Integer.toString(id);
+        this.cusId="CI"+Integer.toString(id);
     }
 
 
     public String ToString() {
-        return name+" "+id+" "+phone+" \n";
+        return name+" "+cusId+" "+phone+" \n";
     }
 }
 
