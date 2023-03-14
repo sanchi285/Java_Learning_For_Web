@@ -8,5 +8,10 @@ public class GenericsDemo {
         printer2.print();
         Printer<String> printer3 = new Printer("Hello Man");
         printer3.print();
+        MyArray<String> artA =  new MyArray<>();
+        artA.add("hello");
+        artA.add("world");
+        artA.printArray();
+
     }
 }
