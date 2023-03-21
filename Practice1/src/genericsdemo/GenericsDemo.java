@@ -44,6 +44,7 @@ public class GenericsDemo {
         mylist.add("O");
         mylist.add("U");
         mylist.show();
+        mylist.show();
 
         Mylist<Integer> mylistInt = new Mylist<>();
         mylistInt.add(845);
@@ -52,6 +53,13 @@ public class GenericsDemo {
         mylistInt.add(245);
         mylistInt.add(245);
         mylistInt.show();
+
+        MyArray2<String> myArray2 = new MyArray2<>();
+        myArray2.add("Jhony");
+        myArray2.add("Jhony2");
+        myArray2.add("Yes");
+
+        myArray2.printArray();
 
     }
 }
