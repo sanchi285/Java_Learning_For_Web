@@ -38,5 +38,20 @@ public class GenericsDemo {
         printer4.print();
         Shout(new Test(23,34));
         Shout("Hello");
+
+        Mylist<String> mylist =  new Mylist<>();
+        mylist.add("I");
+        mylist.add("O");
+        mylist.add("U");
+        mylist.show();
+
+        Mylist<Integer> mylistInt = new Mylist<>();
+        mylistInt.add(845);
+        mylistInt.add(245);
+        mylistInt.add(145);
+        mylistInt.add(245);
+        mylistInt.add(245);
+        mylistInt.show();
+
     }
 }
