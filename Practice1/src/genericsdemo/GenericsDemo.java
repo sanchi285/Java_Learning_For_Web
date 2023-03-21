@@ -7,11 +7,32 @@ class Test{
         this.a=a;
         this.b=b;
     }
+    public Test(){
+    }
 
     @Override
     public String toString() {
         return a+"____"+b;
     }
+}
+
+class Test2 extends Test{
+}
+
+class GenericTest <T extends Test>{
+    T mytype;
+    public GenericTest(T tp){
+        this.mytype = tp;
+    }
+
+    public void print(){
+        System.out.println(mytype);
+    }
+}
+
+
+class  Test3 extends Test{
+
 }
 
 public class GenericsDemo {
