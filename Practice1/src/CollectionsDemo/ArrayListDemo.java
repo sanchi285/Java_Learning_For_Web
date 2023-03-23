@@ -13,6 +13,10 @@ public class ArrayListDemo {
         arrayList.add(19);
         arrayList.forEach(x-> System.out.println(x));
 
+        boolean search = arrayList.contains(4);
+        System.out.println(search);
+        search =arrayList.contains(19);
+        System.out.println(search);
 
     }
 
