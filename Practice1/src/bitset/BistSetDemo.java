@@ -14,6 +14,7 @@ public class BistSetDemo {
         System.out.println(bs1.get(0));
 
         bs2.or(bs1);
+        bs2.flip(0,bs1.length());
         System.out.println(bs2);
 
 
