@@ -19,6 +19,25 @@ public class ReverseEcho {
             sb.reverse();
             msg=sb.toString();
             ps.println(msg);
-        }while (msg.equals("dne"));
+        }while (!msg.equals("dne"));
+    }
+}
+
+
+class Client {
+    public static void main(String[] args) throws Exception{
+        Socket stk = new Socket("localhost",2000);
+        BufferedReader keyb = new BufferedReader(new InputStreamReader(System.in));
+        BufferedReader br = new BufferedReader(new InputStreamReader(stk.getInputStream()));
+        PrintStream ps = new PrintStream(stk.getOutputStream());
+        String msg;
+
+        do
+        {
+            msg = keyb.readLine();
+            ps.println(msg);
+            msg = br.readLine();
+            System.out.println("Response from Server:"+msg);
+        }while (!msg.equals("dne"));
     }
 }
